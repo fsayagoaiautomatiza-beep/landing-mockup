@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="AiAutomatiza - Sistema para atender a tus pacientes y generar ventas de manera automatizada con IA"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v5.16.1" />
+    <title>SACIA | by AIAutomatiza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        --primary: 217.2 91.2% 59.8%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+      }
+      .glass {
+        background-color: #ffffff0d;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-950 text-white font-sans antialiased overflow-x-hidden selection:bg-blue-500/30"
+  >
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+      <div
+        class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-blob"
+      ></div>
+      <div
+        class="absolute top-0 right-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl animate-blob animation-delay-2000"
+      ></div>
+      <div
+        class="absolute -bottom-32 left-1/3 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-blob animation-delay-4000"
+      ></div>
+    </div>
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6">
+      <div
+        class="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center"
+      >
+        <a href="/" class="flex items-center gap-2 group">
+          <div
+            class="bg-gradient-to-br from-blue-500 to-violet-600 p-2 rounded-lg group-hover:scale-105 transition-transform"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-bot w-6 h-6 text-white"
+              aria-hidden="true"
+            >
+              <path d="M12 8V4H8"></path>
+              <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+              <path d="M2 14h2"></path>
+              <path d="M20 14h2"></path>
+              <path d="M15 13v2"></path>
+              <path d="M9 13v2"></path>
+            </svg>
+          </div>
+          <span class="font-bold text-xl tracking-tight">AiAutomatiza</span>
+        </a>
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300"
+        >
+          <a href="#soluciones" class="hover:text-white transition-colors"
+            >Soluciones</a
+          >
+          <a href="#resultados" class="hover:text-white transition-colors"
+            >Resultados</a
+          >
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        </div>
+        <a
+          href="#demo"
+          class="hidden md:block bg-white text-slate-950 px-6 py-2 rounded-full font-semibold hover:bg-slate-200 transition-colors text-sm"
+        >
+          Agenda una Demo
+        </a>
+      </div>
+    </nav>
+    <main>
+      <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div class="relative z-10">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"
+                ></span>
+              </span>
+              IA Activa 24/7
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+              Sistema para atender a tus
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-600"
+                >pacientes</span
+              >
+              y generar ventas
+            </h1>
+            <p class="text-xl text-slate-400 mb-8 leading-relaxed max-w-lg">
+              El 29% de las llamadas a clínicas se pierden. Nuestra IA responde
+              WhatsApps, agenda citas y reactiva pacientes 24/7 sin intervención
+              humana.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#demo"
+                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-violet-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all hover:scale-105"
+              >
+                Automatizar mi Clínica Ahora
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right w-5 h-5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
+              <div class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check w-4 h-4 text-blue-500"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span>Sin contratos forzosos</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check w-4 h-4 text-blue-500"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span>Setup en 48 horas</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-violet-600/10 rounded-3xl blur-2xl"
+            ></div>
+            <div
+              class="relative glass rounded-3xl p-6 border border-white/10 shadow-2xl"
+            >
+              <!-- Mockup Header -->
+              <div
+                class="flex items-center gap-4 border-b border-white/5 pb-4 mb-4"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-bot w-6 h-6 text-white"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 8V4H8"></path>
+                    <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                    <path d="M2 14h2"></path>
+                    <path d="M20 14h2"></path>
+                    <path d="M15 13v2"></path>
+                    <path d="M9 13v2"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-semibold">Asistente IA</div>
+                  <div class="text-xs text-green-400">En línea</div>
+                </div>
+              </div>
+              <!-- Chat Messages -->
+              <div class="space-y-4 font-mono text-sm">
+                <div
+                  class="bg-white/5 rounded-2xl rounded-tl-none p-3 max-w-[80%]"
+                >
+                  <p class="text-slate-300">
+                    Hola, quisiera agendar una cita para limpieza dental 🦷
+                  </p>
+                </div>
+                <div
+                  class="bg-blue-600/20 border border-blue-500/20 rounded-2xl rounded-tr-none p-3 max-w-[90%] ml-auto"
+                >
+                  <p class="text-blue-100">
+                    ¡Hola! Claro que sí. Tengo disponibilidad para este Jueves a
+                    las 4:00 PM o Viernes a las 10:00 AM. ¿Cuál prefieres?
+                  </p>
+                </div>
+                <div
+                  class="bg-white/5 rounded-2xl rounded-tl-none p-3 max-w-[80%]"
+                >
+                  <p class="text-slate-300">
+                    El Viernes a las 10 está perfecto.
+                  </p>
+                </div>
+                <div
+                  class="bg-blue-600/20 border border-blue-500/20 rounded-2xl rounded-tr-none p-3 max-w-[90%] ml-auto"
+                >
+                  <p class="text-blue-100">
+                    ¡Listo! He agendado tu cita para el Viernes a las 10:00 AM.
+                    Te enviaré un recordatorio un día antes. 📅
+                  </p>
+                </div>
+              </div>
+              <!-- Input Mock -->
+              <div class="mt-6 pt-4 border-t border-white/5 flex gap-2">
+                <div class="h-10 bg-white/5 rounded-full flex-1"></div>
+                <div
+                  class="h-10 w-10 bg-blue-600 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle w-5 h-5 text-white"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="resultados"
+        class="py-20 border-y border-white/5 bg-slate-900/50"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div class="space-y-2">
+              <div
+                class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500"
+              >
+                +40%
+              </div>
+              <p class="text-slate-400 font-medium">Conversión en llamadas</p>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500"
+              >
+                0 min
+              </div>
+              <p class="text-slate-400 font-medium">Tiempo de espera</p>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500"
+              >
+                -40%
+              </div>
+              <p class="text-slate-400 font-medium">Carga operativa</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 px-6 bg-slate-950/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">
+              ¿Tu personal está <span class="text-red-400">saturado</span>?
+            </h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+              La gestión manual de pacientes está costando dinero y reputación a
+              tu clínica.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="glass p-8 rounded-3xl hover:bg-white/10 transition-colors group"
+            >
+              <div
+                class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone-off w-7 h-7 text-red-400"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10.1 13.9a14 14 0 0 0 3.732 2.668 1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2 18 18 0 0 1-12.728-5.272"
+                  ></path>
+                  <path d="M22 2 2 22"></path>
+                  <path
+                    d="M4.76 13.582A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 .244.473"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Llamadas Perdidas</h3>
+              <p class="text-slate-400 leading-relaxed">
+                El 60% de los pacientes llaman fuera de horario laboral. Si no
+                respondes al instante, llaman a la competencia.
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="glass p-8 rounded-3xl hover:bg-white/10 transition-colors group"
+            >
+              <div
+                class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-calendar-x2 lucide-calendar-x-2 w-7 h-7 text-orange-400"
+                  aria-hidden="true"
+                >
+                  <path d="M8 2v4"></path>
+                  <path d="M16 2v4"></path>
+                  <path
+                    d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"
+                  ></path>
+                  <path d="M3 10h18"></path>
+                  <path d="m17 22 5-5"></path>
+                  <path d="m17 17 5 5"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Ausentismo Alto</h3>
+              <p class="text-slate-400 leading-relaxed">
+                Pacientes que olvidan su cita por falta de confirmación
+                inmediata, dejando huecos imposibles de llenar.
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="glass p-8 rounded-3xl hover:bg-white/10 transition-colors group"
+            >
+              <div
+                class="w-14 h-14 bg-yellow-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-message-square-warning w-7 h-7 text-yellow-400"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+                  ></path>
+                  <path d="M12 15h.01"></path>
+                  <path d="M12 7v4"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Tareas Repetitivas</h3>
+              <p class="text-slate-400 leading-relaxed">
+                Tu equipo pierde horas respondiendo "¿Cuánto cuesta la
+                consulta?" y "¿Dónde están ubicados?" una y otra vez.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="soluciones" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">
+              Tu Nuevo Empleado Estrella:
+              <span class="text-blue-500">La IA</span>
+            </h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+              Automatiza el 90% de las tareas administrativas y enfócate en lo
+              que realmente importa: tus pacientes.
+            </p>
+          </div>
+          <div
+            class="grid md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[600px]"
+          >
+            <!-- Feature 1: Large -->
+            <div
+              class="md:col-span-2 md:row-span-2 glass rounded-3xl p-8 relative overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              ></div>
+              <div class="relative z-10 h-full flex flex-col">
+                <div
+                  class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-globe w-6 h-6 text-blue-400"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                    ></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">
+                  Recepción 24/7 Omnicanal
+                </h3>
+                <p class="text-slate-400 mb-8 max-w-md">
+                  Atiende a tus pacientes donde ellos estén. Nuestra IA responde
+                  instantáneamente en Web, WhatsApp e Instagram, resolviendo
+                  dudas y capturando datos sin descanso.
+                </p>
+                <div
+                  class="mt-auto bg-slate-950/50 rounded-xl p-4 border border-white/5"
+                >
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span class="text-xs font-mono text-slate-400"
+                      >LOGS DE ACTIVIDAD</span
+                    >
+                  </div>
+                  <div class="space-y-2 font-mono text-xs text-slate-500">
+                    <p>
+                      > <span class="text-blue-400">WhatsApp:</span> Nuevo lead
+                      capturado (Dr. Pérez)
+                    </p>
+                    <p>
+                      > <span class="text-purple-400">Instagram:</span> Consulta
+                      de precio respondida
+                    </p>
+                    <p>
+                      > <span class="text-green-400">Web:</span> Cita agendada
+                      exitosamente
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div
+              class="glass rounded-3xl p-8 relative overflow-hidden group hover:border-blue-500/30 transition-colors"
+            >
+              <div
+                class="w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-calendar-check w-6 h-6 text-violet-400"
+                  aria-hidden="true"
+                >
+                  <path d="M8 2v4"></path>
+                  <path d="M16 2v4"></path>
+                  <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                  <path d="M3 10h18"></path>
+                  <path d="m9 16 2 2 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Agendamiento Autónomo</h3>
+              <p class="text-slate-400 text-sm">
+                Se conecta directamente con tu Google Calendar o Doctoralia para
+                agendar citas en tiempo real sin conflictos.
+              </p>
+            </div>
+            <!-- Feature 3 -->
+            <div
+              class="glass rounded-3xl p-8 relative overflow-hidden group hover:border-blue-500/30 transition-colors"
+            >
+              <div
+                class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-database w-6 h-6 text-indigo-400"
+                  aria-hidden="true"
+                >
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                  <path d="M3 12A9 3 0 0 0 21 12"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Reactivación de Base</h3>
+              <p class="text-slate-400 text-sm">
+                La IA contacta proactivamente a pacientes antiguos para ofrecer
+                chequeos y promociones, llenando tu agenda.
+              </p>
+            </div>
+            <!-- Feature 4 (Hidden in grid row logic but added as extra card if needed, or I can fit it in) -->
+            <!-- Wait, grid is 3 cols, 2 rows. 
+                  Feature 1 takes 2 cols, 2 rows.
+                  So we have 1 col, 2 rows left.
+                  Feature 2 takes 1 col, 1 row.
+                  Feature 3 takes 1 col, 1 row.
+                  
+                  I need to fit Feature 4: "Voz Humana".
+                  Let's adjust the grid.
+                  
+                  Option A: 
+                  Row 1: [Feature 1 (2 cols)] [Feature 2]
+                  Row 2: [Feature 1 (cont)] [Feature 3]
+                  
+                  I need a 4th slot.
+                  Let's make Feature 1 take 2 cols, 1 row? No, user wanted "Feature 1 (Grande)".
+                  
+                  Let's try:
+                  Grid 4 cols?
+                  Or just make a 3rd row?
+                  
+                  Let's do:
+                  Row 1: [Feature 1 (2 cols, 2 rows)] [Feature 2]
+                  Row 2:                              [Feature 3]
+                  Row 3: [Feature 4 (3 cols)]?
+                  
+                  Or:
+                  Row 1: [Feature 1 (2 cols, 2 rows)] [Feature 2]
+                  Row 2:                              [Feature 3]
+                  
+                  Where does Feature 4 go?
+                  Maybe Feature 4 is a wide card at the bottom?
+                  
+                  Let's change the layout slightly to fit 4 items nicely.
+                  Grid cols 3.
+                  Item 1: col-span-2 row-span-2.
+                  Item 2: col-span-1.
+                  Item 3: col-span-1.
+                  Item 4: col-span-3? Or maybe just add it below.
+                  
+                  Actually, let's make Feature 1 col-span-2 row-span-1.
+                  Row 1: [Feature 1 (2 cols)] [Feature 2 (1 col)]
+                  Row 2: [Feature 3 (1 col)] [Feature 4 (2 cols)]
+                  
+                  This looks balanced.
+             -->
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <!-- Feature 4 moved here to balance layout if I can't fit it in the main grid easily without breaking the "Bento" feel -->
+            <div
+              class="md:col-span-3 glass rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 group hover:border-blue-500/30 transition-colors"
+            >
+              <div
+                class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center shrink-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mic w-8 h-8 text-pink-400"
+                  aria-hidden="true"
+                >
+                  <path d="M12 19v3"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <rect x="9" y="2" width="6" height="13" rx="3"></rect>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">
+                  Voz Humana Ultra-Realista
+                </h3>
+                <p class="text-slate-400">
+                  Realiza llamadas salientes para confirmar asistencias o dar
+                  seguimiento. Nuestra tecnología de voz es tan natural que tus
+                  pacientes no notarán que hablan con una IA.
+                </p>
+              </div>
+              <div class="ml-auto">
+                <div class="flex gap-1 items-end h-8">
+                  <span class="w-1 bg-pink-500 h-3 animate-pulse"></span>
+                  <span
+                    class="w-1 bg-pink-500 h-6 animate-pulse delay-75"
+                  ></span>
+                  <span
+                    class="w-1 bg-pink-500 h-8 animate-pulse delay-150"
+                  ></span>
+                  <span
+                    class="w-1 bg-pink-500 h-4 animate-pulse delay-100"
+                  ></span>
+                  <span
+                    class="w-1 bg-pink-500 h-6 animate-pulse delay-200"
+                  ></span>
+                  <span
+                    class="w-1 bg-pink-500 h-3 animate-pulse delay-75"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-12 px-6 border-t border-white/10 bg-slate-950">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-2">
+            <a href="/" class="flex items-center gap-2 mb-6">
+              <div
+                class="bg-gradient-to-br from-blue-500 to-violet-600 p-2 rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-bot w-6 h-6 text-white"
+                  aria-hidden="true"
+                >
+                  <path d="M12 8V4H8"></path>
+                  <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                  <path d="M2 14h2"></path>
+                  <path d="M20 14h2"></path>
+                  <path d="M15 13v2"></path>
+                  <path d="M9 13v2"></path>
+                </svg>
+              </div>
+              <span class="font-bold text-xl tracking-tight">AiAutomatiza</span>
+            </a>
+            <p class="text-slate-400 max-w-sm">
+              Transformamos la atención al paciente con inteligencia artificial.
+              Automatiza, escala y mejora la experiencia de tu clínica.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-6">Soluciones</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Recepción IA</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Agendamiento</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Reactivación</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Voz Neuronal</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-6">Legal</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Términos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-slate-500 text-sm">
+            © 2024 AiAutomatiza. Todos los derechos reservados.
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram w-5 h-5"
+                aria-hidden="true"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin w-5 h-5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-twitter w-5 h-5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,892 @@
+@import "tailwindcss";
+
+/* ============================================
+   AIAUTOMATIZA DESIGN SYSTEM
+   Premium White Theme - Ultra Minimalist
+   ============================================ */
+
+@theme {
+  /* ==========================================
+     WHITE THEME COLOR SYSTEM
+     Subtle grays and clean whites
+     ========================================== */
+
+  /* Primary Background: Clean White with subtle gray variations */
+  --color-background: #ffffff;
+  --color-background-subtle: #fafbfc;
+  --color-background-muted: #f8f9fa;
+  --color-background-elevated: #ffffff;
+  --color-background-card: #ffffff;
+
+  /* Surface colors for visual separation */
+  --color-surface-50: #fefefe;
+  --color-surface-100: #f8f9fa;
+  --color-surface-200: #f4f4f4;
+  --color-surface-300: #ebebeb;
+  --color-surface-400: #e0e0e0;
+
+  /* Foreground/Text Colors - Deep contrast */
+  --color-foreground: #0f172a;
+  --color-foreground-secondary: #334155;
+  --color-muted-foreground: #64748b;
+  --color-light-foreground: #94a3b8;
+
+  /* Primary Accent: Refined Blue */
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+  --color-primary-soft: rgba(37, 99, 235, 0.08);
+  --color-primary-glow: rgba(37, 99, 235, 0.15);
+
+  /* Secondary Accent: Violet */
+  --color-secondary: #7c3aed;
+  --color-secondary-soft: rgba(124, 58, 237, 0.08);
+
+  /* Accent Colors for Features */
+  --color-green: #16a34a;
+  --color-green-soft: rgba(22, 163, 74, 0.08);
+  --color-red: #dc2626;
+  --color-red-soft: rgba(220, 38, 38, 0.08);
+  --color-orange: #ea580c;
+  --color-orange-soft: rgba(234, 88, 12, 0.08);
+  --color-violet: #7c3aed;
+  --color-violet-soft: rgba(124, 58, 237, 0.08);
+
+  /* Border colors - subtle separation */
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-hover: rgba(0, 0, 0, 0.12);
+  --color-border-active: rgba(37, 99, 235, 0.3);
+
+  /* ==========================================
+     SOFT SHADOWS - Premium "floating" effect
+     High blur, low opacity
+     ========================================== */
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.05);
+
+  /* Colored shadows for accents */
+  --shadow-primary: 0 8px 24px rgba(37, 99, 235, 0.15);
+  --shadow-primary-lg: 0 16px 48px rgba(37, 99, 235, 0.2);
+
+  /* ==========================================
+     TYPOGRAPHY SYSTEM - Minimalist scale
+     ========================================== */
+
+  --font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --font-family-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  /* Fluid Typography Scale - Increased contrast */
+  --font-size-display-xl: clamp(2.75rem, 7vw, 4.5rem);
+  --font-size-display-l: clamp(2.25rem, 5vw, 3.5rem);
+  --font-size-display-m: clamp(1.75rem, 4vw, 2.5rem);
+  --font-size-heading: clamp(1.25rem, 2.5vw, 1.75rem);
+  --font-size-subheading: clamp(1.125rem, 2vw, 1.375rem);
+  --font-size-body-l: clamp(1.0625rem, 1.5vw, 1.1875rem);
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+  --font-size-small: 0.8125rem;
+
+  /* Letter Spacing - Tight for headlines */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.01em;
+  --tracking-wider: 0.025em;
+
+  /* Line Heights - Increased for white backgrounds */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.65;
+  --leading-loose: 1.75;
+
+  /* ==========================================
+     SPACING SYSTEM (8px BASE GRID)
+     Generous negative space
+     ========================================== */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  /* ==========================================
+     ANIMATION TIMING - Smooth & Premium
+     ========================================== */
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Animation Durations */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-slowest: 800ms;
+
+  /* ==========================================
+     BORDER RADIUS - Refined curves
+     ========================================== */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+
+  /* ==========================================
+     KEYFRAME ANIMATIONS
+     ========================================== */
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  --animate-fade-in: fade-in 0.6s var(--ease-out-expo) forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/* ============================================
+   GLOBAL STYLES - White Theme Base
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: var(--leading-relaxed);
+  font-size: var(--font-size-body);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Selection Color - Brand aligned */
+::selection {
+  background-color: var(--color-primary-soft);
+  color: var(--color-foreground);
+}
+
+/* Focus visible - Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   Clean, readable hierarchy
+   ============================================ */
+
+.text-display-xl {
+  font-size: var(--font-size-display-xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-tight);
+  color: var(--color-foreground);
+}
+
+.text-display-l {
+  font-size: var(--font-size-display-l);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-foreground);
+}
+
+.text-display-m {
+  font-size: var(--font-size-display-m);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  color: var(--color-foreground);
+}
+
+.text-heading {
+  font-size: var(--font-size-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: var(--leading-snug);
+  color: var(--color-foreground);
+}
+
+.text-subheading {
+  font-size: var(--font-size-subheading);
+  font-weight: 500;
+  line-height: var(--leading-normal);
+  color: var(--color-foreground-secondary);
+}
+
+.text-body-l {
+  font-size: var(--font-size-body-l);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted-foreground);
+}
+
+.text-body {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted-foreground);
+}
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  font-weight: 400;
+  line-height: var(--leading-normal);
+  color: var(--color-light-foreground);
+}
+
+/* Gradient Text - Refined */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-subtle {
+  background: linear-gradient(
+    180deg,
+    var(--color-foreground) 0%,
+    var(--color-muted-foreground) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   CARD STYLES - Soft shadows, elevated feel
+   ============================================ */
+
+.card {
+  background: var(--color-background-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-base) var(--ease-out-expo);
+}
+
+.card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Premium Card - More elevation */
+.card-premium {
+  background: var(--color-background-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--duration-slow) var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.02) 0%,
+    transparent 50%,
+    rgba(124, 58, 237, 0.02) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--duration-slow) ease;
+}
+
+.card-premium:hover {
+  border-color: var(--color-border-active);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.card-premium:hover::before {
+  opacity: 1;
+}
+
+/* Interactive Card - Subtle hover */
+.card-interactive {
+  transition: all var(--duration-slow) var(--ease-out-expo);
+}
+
+.card-interactive:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-border-active);
+}
+
+/* ============================================
+   BUTTON STYLES - Clean & Premium
+   ============================================ */
+
+/* Primary CTA Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  color: white;
+  font-weight: 600;
+  font-size: var(--font-size-body);
+  letter-spacing: var(--tracking-wide);
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out-expo);
+  box-shadow: var(--shadow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-primary-lg);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-foreground);
+  font-weight: 500;
+  font-size: var(--font-size-caption);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--duration-base) ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-foreground);
+  background: var(--color-surface-100);
+  transform: translateY(-1px);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-muted-foreground);
+  font-weight: 500;
+  font-size: var(--font-size-caption);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.btn-ghost:hover {
+  color: var(--color-foreground);
+  background: var(--color-surface-100);
+}
+
+/* ============================================
+   NAVIGATION STYLES
+   ============================================ */
+
+.nav-link {
+  position: relative;
+  color: var(--color-muted-foreground);
+  font-weight: 500;
+  font-size: var(--font-size-caption);
+  transition: color var(--duration-fast) ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  border-radius: var(--radius-full);
+  transition: width var(--duration-base) var(--ease-out-expo);
+}
+
+.nav-link:hover {
+  color: var(--color-foreground);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   SECTION STYLES - Alternating backgrounds
+   ============================================ */
+
+.section {
+  position: relative;
+  padding: var(--space-24) var(--space-6);
+}
+
+.section-muted {
+  background-color: var(--color-background-muted);
+}
+
+.section-subtle {
+  background-color: var(--color-background-subtle);
+}
+
+/* Section divider - subtle line */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* ============================================
+   BADGE STYLES
+   ============================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-surface-100);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: var(--color-muted-foreground);
+}
+
+.badge-primary {
+  background: var(--color-primary-soft);
+  border-color: rgba(37, 99, 235, 0.15);
+  color: var(--color-primary);
+}
+
+.badge-success {
+  background: var(--color-green-soft);
+  border-color: rgba(22, 163, 74, 0.15);
+  color: var(--color-green);
+}
+
+.badge-danger {
+  background: var(--color-red-soft);
+  border-color: rgba(220, 38, 38, 0.15);
+  color: var(--color-red);
+}
+
+/* ============================================
+   GLASS MORPHISM - Subtle for white theme
+   ============================================ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ============================================ */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--duration-slower) var(--ease-out-expo),
+    transform var(--duration-slower) var(--ease-out-expo);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate="fade-up"] {
+  transform: translateY(24px);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(-24px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(24px);
+}
+
+[data-animate="scale"] {
+  transform: scale(0.95);
+}
+
+[data-animate="fade-left"].is-visible,
+[data-animate="fade-right"].is-visible {
+  transform: translateX(0);
+}
+
+[data-animate="scale"].is-visible {
+  transform: scale(1);
+}
+
+/* Stagger children */
+[data-animate-stagger] > *:nth-child(1) {
+  transition-delay: 0ms;
+}
+[data-animate-stagger] > *:nth-child(2) {
+  transition-delay: 80ms;
+}
+[data-animate-stagger] > *:nth-child(3) {
+  transition-delay: 160ms;
+}
+[data-animate-stagger] > *:nth-child(4) {
+  transition-delay: 240ms;
+}
+[data-animate-stagger] > *:nth-child(5) {
+  transition-delay: 320ms;
+}
+[data-animate-stagger] > *:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+/* ============================================
+   LOGO HOVER EFFECTS - Grayscale to color
+   ============================================ */
+
+.logo-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all var(--duration-base) ease;
+}
+
+.logo-grayscale:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ============================================
+   ICON CONTAINERS
+   ============================================ */
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  transition: all var(--duration-base) var(--ease-out-expo);
+}
+
+.icon-container-primary {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.icon-container-green {
+  background: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+.icon-container-red {
+  background: var(--color-red-soft);
+  color: var(--color-red);
+}
+
+.icon-container-orange {
+  background: var(--color-orange-soft);
+  color: var(--color-orange);
+}
+
+.icon-container-violet {
+  background: var(--color-violet-soft);
+  color: var(--color-violet);
+}
+
+/* ============================================
+   LEGACY ANIMATION CLASSES
+   ============================================ */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s var(--ease-out-expo) both;
+}
+
+.animate-fade-in-left {
+  animation: fade-in-left 0.6s var(--ease-out-expo) both;
+}
+
+.animate-fade-in-right {
+  animation: fade-in-right 0.6s var(--ease-out-expo) both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s var(--ease-out-expo) both;
+}
+
+/* Animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* ============================================
+   GRADIENT BORDER EFFECTS
+   ============================================ */
+
+.gradient-border {
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  background-size: 200% 200%;
+  animation: gradient-rotate 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container with max width */
+.container-tight {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container-wide {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-16) var(--space-4);
+  }
+}

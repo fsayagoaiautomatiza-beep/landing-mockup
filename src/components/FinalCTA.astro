@@ -1,0 +1,84 @@
+---
+import { ArrowRight, CheckCircle } from 'lucide-react';
+---
+
+<section id="demo" class="py-20 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden bg-slate-50/30">
+    <!-- Ambient background effects - White theme light glow -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent"></div>
+    
+    <!-- Animated glow orbs - More subtle -->
+    <div class="absolute top-1/4 left-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-200/20 rounded-full blur-[100px] animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-56 sm:w-64 md:w-80 h-56 sm:h-64 md:h-80 bg-violet-200/20 rounded-full blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10">
+        <!-- CTA Card with gradient border -->
+        <div 
+            class="relative group"
+            data-animate="scale"
+        >
+            <!-- Gradient border effect - softer for white theme -->
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-300/40 via-violet-300/40 to-blue-300/40 rounded-3xl blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <!-- Card content - Clean White -->
+            <div class="relative bg-white/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 lg:p-16 text-center border border-white/60 shadow-xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs sm:text-sm font-medium mb-6 sm:mb-8 shadow-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    Demo disponible ahora
+                </div>
+                
+                <!-- Headline -->
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2 text-slate-900">
+                    ¿Listo para automatizar<br />
+                    <span class="text-gradient">tu clínica?</span>
+                </h2>
+                
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg md:text-xl text-slate-500 mb-8 sm:mb-10 max-w-xl mx-auto px-2 leading-relaxed">
+                    Agenda una demo personalizada y descubre cómo multiplicar tus ingresos sin ampliar tu equipo.
+                </p>
+                
+                <!-- CTA Button -->
+                <div class="relative inline-block mb-8 sm:mb-10">
+                    <!-- Glow effect behind button -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-violet-400/30 blur-2xl scale-150 animate-pulse opacity-60"></div>
+                    
+                    <a 
+                        href="/demo" 
+                        class="btn-primary relative text-base sm:text-lg px-8 sm:px-10 md:px-12 py-4 sm:py-5 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30"
+                        id="final-cta"
+                    >
+                        <span class="hidden sm:inline">Agenda tu Demo Gratis</span>
+                        <span class="sm:hidden">Agenda Demo</span>
+                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    </a>
+                </div>
+                
+                <!-- Trust indicators - Darker icons for contrast -->
+                <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-8 text-sm text-slate-500 font-medium">
+                    <div class="flex items-center gap-2">
+                        <div class="bg-green-100 rounded-full p-0.5">
+                            <CheckCircle className="w-4 h-4 text-green-600" />
+                        </div>
+                        <span>30 min demo</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="bg-green-100 rounded-full p-0.5">
+                            <CheckCircle className="w-4 h-4 text-green-600" />
+                        </div>
+                        <span>Sin compromiso</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="bg-green-100 rounded-full p-0.5">
+                            <CheckCircle className="w-4 h-4 text-green-600" />
+                        </div>
+                        <span>Setup en 48h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

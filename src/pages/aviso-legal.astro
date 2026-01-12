@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ArrowLeft, FileText, Mail, MapPin, Building } from 'lucide-react';
+---
+
+<Layout title="Aviso Legal | AiAutomatiza">
+    <main class="min-h-screen relative bg-slate-50">
+        <!-- Background -->
+        <div class="fixed inset-0 z-0 bg-white">
+            <div class="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10">
+            <!-- Header -->
+            <header class="px-4 sm:px-6 lg:px-8 py-6 border-b border-slate-200 bg-white/50 backdrop-blur-sm sticky top-0 z-20">
+                <div class="max-w-4xl mx-auto flex items-center justify-between">
+                    <a 
+                        href="/" 
+                        class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium group"
+                    >
+                        <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                        Volver al inicio
+                    </a>
+                    
+                    <div class="flex items-center gap-2">
+                        <FileText className="w-5 h-5 text-blue-600" />
+                        <span class="text-sm text-slate-500 font-medium">Documento Legal</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Main content -->
+            <article class="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+                <div class="max-w-4xl mx-auto">
+                    
+                    <!-- Title -->
+                    <div class="mb-12 sm:mb-16">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+                            Aviso <span class="text-gradient">Legal</span>
+                        </h1>
+                        <p class="text-slate-500">Última actualización: Enero 2026</p>
+                    </div>
+                    
+                    <!-- Company info card -->
+                    <div class="mb-12 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-lg shadow-slate-100">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100">
+                                <Building className="w-6 h-6 text-blue-600" />
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-semibold text-slate-900 mb-1">AIAUTOMATIZA, S.L.</h2>
+                                <p class="text-slate-500 text-sm">Información del titular del sitio web</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-slate-500 mb-1 font-medium">NIF</p>
+                                <p class="text-slate-900 font-medium">B55406748</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 mb-1 font-medium">Domicilio</p>
+                                <p class="text-slate-900 font-medium">C/ Padre Esteban Pernet, 8, 46014 – Valencia</p>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <p class="text-slate-500 mb-1 font-medium">Registro Mercantil</p>
+                                <p class="text-slate-900 font-medium">Inscrita en el Registro Mercantil de Valencia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="prose prose-slate max-w-none">
+                        
+                        <section class="mb-10">
+                            <p class="text-slate-600 leading-relaxed">
+                                En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), el propietario de la web le informa de lo siguiente:
+                            </p>
+                        </section>
+                        
+                        <!-- Section 1 -->
+                        <section class="mb-10">
+                            <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-4 flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 text-sm font-bold border border-blue-100">1</span>
+                                Limitación de responsabilidad
+                            </h2>
+                            <div class="text-slate-600 leading-relaxed space-y-4 pl-11">
+                                <p>
+                                    Con los límites establecidos en la ley, AIAUTOMATIZA, S.L. no asume ninguna responsabilidad derivada de la falta de veracidad, integridad, actualización y precisión de los datos o informaciones que contienen sus páginas web.
+                                </p>
+                                <p>
+                                    Los contenidos e información no vinculan a AIAUTOMATIZA, S.L. ni constituyen opiniones, consejos o asesoramiento legal de ningún tipo pues se trata meramente de un servicio ofrecido con carácter informativo y divulgativo.
+                                </p>
+                                <p>
+                                    Las páginas de Internet de AIAUTOMATIZA, S.L. pueden contener enlaces (links) a otras páginas de terceras partes que AIAUTOMATIZA, S.L. no puede controlar. Por lo tanto, AIAUTOMATIZA, S.L. no puede asumir responsabilidades por el contenido que pueda aparecer en páginas de terceros.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section 2 -->
+                        <section class="mb-10">
+                            <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-4 flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 text-sm font-bold border border-blue-100">2</span>
+                                Propiedad intelectual
+                            </h2>
+                            <div class="text-slate-600 leading-relaxed space-y-4 pl-11">
+                                <p>
+                                    Los textos, imágenes, sonidos, animaciones, software y el resto de los contenidos incluidos en este website son propiedad exclusiva de AIAUTOMATIZA, S.L. o sus licenciantes. Cualquier acto de transmisión, distribución, cesión, reproducción, almacenamiento o comunicación pública total o parcial, deberá contar con el consentimiento expreso de AIAUTOMATIZA, S.L.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section 3 -->
+                        <section class="mb-10">
+                            <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-4 flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 text-sm font-bold border border-blue-100">3</span>
+                                Protección de datos personales
+                            </h2>
+                            <div class="text-slate-600 leading-relaxed space-y-4 pl-11">
+                                <p>
+                                    Asimismo, para acceder a algunos de los servicios que AIAUTOMATIZA, S.L. ofrece a través del sitio web, deberá proporcionar algunos datos de carácter personal. En cumplimiento de lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos le informamos que, mediante la cumplimentación de los presentes formularios, sus datos personales quedarán incorporados y serán tratados en los ficheros de AIAUTOMATIZA, S.L. con el fin de poderle prestar y ofrecer nuestros servicios así como para informarle de las mejoras del sitio Web.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section 4 -->
+                        <section class="mb-10">
+                            <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-4 flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 text-sm font-bold border border-blue-100">4</span>
+                                Ejercicio de derechos
+                            </h2>
+                            <div class="text-slate-600 leading-relaxed space-y-4 pl-11">
+                                <p>
+                                    Le informamos también de que tendrá la posibilidad en todo momento de ejercer los derechos de acceso, rectificación, cancelación, oposición, limitación y portabilidad de sus datos de carácter personal, de manera gratuita mediante email a: <a href="mailto:aiautomatiza1@gmail.com" class="text-blue-600 hover:underline">aiautomatiza1@gmail.com</a> o en la dirección: C/ Padre Esteban Pernet, 8, 46014 – Valencia.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Contact info -->
+                        <section class="mt-16 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-lg shadow-slate-100">
+                            <h3 class="text-lg font-semibold text-slate-900 mb-6">Información de contacto</h3>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="flex items-start gap-3">
+                                    <Mail className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                                    <div>
+                                        <p class="text-sm text-slate-500 font-medium">Email</p>
+                                        <a href="mailto:aiautomatiza1@gmail.com" class="text-slate-900 hover:text-blue-600 transition-colors font-medium">aiautomatiza1@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <MapPin className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                                    <div>
+                                        <p class="text-sm text-slate-500 font-medium">Dirección</p>
+                                        <p class="text-slate-900">C/ Padre Esteban Pernet, 8<br />46014 - Valencia, España</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Footer -->
+            <footer class="px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-200 text-center bg-slate-50">
+                <p class="text-slate-500 text-sm">
+                    © 2024 AiAutomatiza, S.L. · Todos los derechos reservados
+                </p>
+                <div class="mt-3 flex items-center justify-center gap-4 text-xs font-medium">
+                    <a href="/privacidad" class="text-slate-500 hover:text-blue-600 transition-colors">Privacidad</a>
+                    <span class="text-slate-300">·</span>
+                    <a href="/aviso-legal" class="text-blue-600">Aviso Legal</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+</Layout>

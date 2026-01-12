@@ -1,0 +1,140 @@
+---
+import { Bot, Instagram, Linkedin, Mail } from 'lucide-react';
+---
+
+<footer class="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white border-t border-slate-100">
+    <!-- Subtle gradient top glow -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+    
+    <div class="max-w-7xl mx-auto">
+        <!-- Main footer content -->
+        <div class="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
+            <!-- Brand column -->
+            <div class="col-span-2 md:col-span-5">
+                <a href="/" class="flex items-center gap-3 mb-6 group">
+                    <img src="/logo.webp" alt="AiAutomatiza" class="w-16 h-16">
+                    <span class="font-bold text-xl tracking-tight text-slate-900">AIAutomatiza</span>
+                </a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm mb-8">
+                    Transformamos la atención al paciente con inteligencia artificial. 
+                    Automatiza, escala y mejora la experiencia de tu clínica.
+                </p>
+                
+                <!-- Social links - Light theme styles -->
+                <div class="flex gap-3">
+                    <a 
+                        href="https://www.instagram.com/aiautomatiza/" 
+                        class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-900 hover:border-slate-900 transition-all duration-300"
+                        aria-label="Instagram"
+                    >
+                        <Instagram className="w-5 h-5" />
+                    </a>
+                    <a 
+                        href="https://www.linkedin.com/company/aiautomatiza/posts/?feedView=all" 
+                        class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-900 hover:border-slate-900 transition-all duration-300"
+                        aria-label="LinkedIn"
+                    >
+                        <Linkedin className="w-5 h-5" />
+                    </a>
+                    
+                    <a 
+                        href="mailto:aiautomatiza1@gmail.com" 
+                        class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-slate-900 hover:border-slate-900 transition-all duration-300"
+                        aria-label="Email"
+                    >
+                        <Mail className="w-5 h-5" />
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Solutions column -->
+            <div class="md:col-span-3">
+                <h4 class="font-bold text-slate-900 mb-6 text-sm uppercase tracking-wide">Soluciones</h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#soluciones" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Asistente WhatsApp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#soluciones" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Recepción de Llamadas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#soluciones" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Llamadas Salientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#soluciones" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Integraciones
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Company column -->
+            <div class="md:col-span-2">
+                <h4 class="font-bold text-slate-900 mb-6 text-sm uppercase tracking-wide">Empresa</h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#resultados" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Resultados
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#clientes" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#demo" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Legal column -->
+            <div class="md:col-span-2">
+                <h4 class="font-bold text-slate-900 mb-6 text-sm uppercase tracking-wide">Legal</h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="/privacidad" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Privacidad
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/aviso-legal" class="text-slate-500 text-sm hover:text-blue-600 transition-colors font-medium">
+                            Aviso Legal
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-slate-400 text-sm text-center sm:text-left">
+                © 2024 AiAutomatiza. Todos los derechos reservados.
+            </p>
+            
+            <div class="flex items-center gap-6">
+                <!-- GDPR Badge -->
+                <a href="https://gdpr.eu/" target="_blank" rel="noopener" class="block opacity-80 hover:opacity-100 transition-opacity" aria-label="GDPR Compliant">
+                    <img 
+                        src="https://static.tildacdn.net/tild3033-3333-4036-b732-333333616638/67df0a0da3db54e92080.svg" 
+                        alt="GDPR Compliant" 
+                        class="h-8 w-auto" 
+                    />
+                </a>
+
+                <div class="flex items-center gap-2 text-sm text-slate-400">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Sistemas operativos
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
